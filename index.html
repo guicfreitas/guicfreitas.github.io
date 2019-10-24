@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Meu primeiro site no GitHub Pages</title>
+   
 </head>
 <body>
-    <h1>Eu sou um jovem aprendiz</h1>
+    <span id="status"></span>
+    <script>
+    function _update()
+            {
+                $.ajax({
+                    method:"get",
+                    dataType: "html",
+                    url: "192.168.0.50:8080/status",
+                    success: function(data){
+                        //var btc_brl = data[0]['price_brl'];
+                        //var percent_btc_brl = data[0]['percent_change_24h'];
+                        var status = data;
+
+                        $("#status").html(status);
+
+                        $
+                       
+                    }
+                })
+            }
+            </script>
 </body>
 </html>
